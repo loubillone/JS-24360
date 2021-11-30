@@ -1,10 +1,9 @@
-let nombre = prompt("Ingrese su nombre");
-let apellido = prompt("Ingrese su apellido");
+let edad = Number(prompt("Ingrese su edad"));
 
-console.log('Su nombre completo es ' +nombre + " " + apellido);
+if(edad <18){
 
-let añoNac = parseInt(prompt("Ingrese su año de nacimiento"));
-let añoActual = 2021;
-let resultado = añoActual - añoNac;
+    alert("No puedes ingresar, sos menor de edad")
 
-console.log(`Usted tiene ` +resultado + ` años`);
+}else{
+    alert("Bienvenido, puedes pasar porque eres mayor de edad")
+}
