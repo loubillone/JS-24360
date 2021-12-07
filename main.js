@@ -4,3 +4,8 @@ for (let i = 1; i <= 10; i++) {
     
     alert(" Su Turno es el N° "+i+" Nombre: "+nombrePaciente);
  }
+
+ /*PRUEBA PARA SUBIR REPO*/
+
+ 
+
