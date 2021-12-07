@@ -1,8 +1,6 @@
-let edad = Number(prompt("Ingrese su edad"));
+for (let i = 1; i <= 10; i++) {
 
-if(edad <18){
-    alert("No puedes ingresar, sos menor de edad")
-
-}else{
-    alert("Bienvenido, puedes pasar porque eres mayor de edad")
-}
+    let nombrePaciente = prompt("Ingresar nombre");
+    
+    alert(" Su Turno es el N° "+i+" Nombre: "+nombrePaciente);
+ }
