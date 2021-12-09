@@ -1,11 +1,14 @@
-for (let i = 1; i <= 10; i++) {
+function validarStock(cantidadDeStock, cantidadOrdenada){
+    if(cantidadOrdenada > cantidadDeStock){
+        alert("Disculpa no tenemos en stock");
 
-    let nombrePaciente = prompt("Ingresar nombre");
-    
-    alert(" Su Turno es el N° "+i+" Nombre: "+nombrePaciente);
- }
+    }else{
+        alert("Felicidades compraste en El reino de la ternura");
+    }
 
- /*PRUEBA PARA SUBIR REPO*/
+}
 
- 
+const ordenesDelUsuario = Number(prompt(`¿Cuantas remeras queres?`));
+const stock = 25;
 
+validarStock(stock,ordenesDelUsuario);
