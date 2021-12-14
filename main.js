@@ -1,14 +1,28 @@
-function validarStock(cantidadDeStock, cantidadOrdenada){
-    if(cantidadOrdenada > cantidadDeStock){
-        alert("Disculpa no tenemos en stock");
+class Producto {
+    constructor(nombre, precio, stock, cantidadComprada) {
 
-    }else{
-        alert("Felicidades compraste en El reino de la ternura");
+        this.nombre = nombre,
+        this.precio = precio,
+        this.stock = stock,
+        this.cantidadComprada = cantidadComprada
     }
 
+    controlStock(){
+        if(this.cantidadComprada > this.stock){
+            alert("No hay stock")
+        }else{
+            this.stock = this.stock - cantidadComprada;
+            alert('Se vendieron ' + this.cantidadCompra + 'unidades y quedaron ' + this.stock +  'disponibles')
+        }
+    }
+
+    
 }
 
-const ordenesDelUsuario = Number(prompt(`¿Cuantas remeras queres?`));
-const stock = 25;
 
-validarStock(stock,ordenesDelUsuario);
+const producto1 = new Producto ("campera", 950, 30,15)
+
+
+console.log(producto1);
+producto1.controlStock();
+console.log(producto1)
