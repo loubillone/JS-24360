@@ -9,6 +9,12 @@ class Producto {
 const producto1 = new Producto ("remera", 150, 100);
 const producto2 = new Producto ("pantalon", 200, 15);
 
+const producto3 = { nombre: "camisa", precio: 200, stock: 30 };
+const array   = [producto3, { nombre: "zapatilla", precio: 350, stock: 40 }];
+array.push({ nombre: "calza", precio: 250, stock: 20});
+
+console.log(array);
+
 let cantidadProductos = prompt("Cuantos productos desea comprar?");
 let precioFinal = 0;
 
