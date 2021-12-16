@@ -1,28 +1,64 @@
 class Producto {
-    constructor(nombre, precio, stock, cantidadComprada) {
+    constructor(nombre, precio, stock) {
+        this.nombre = nombre
+        this.precio = precio
+        this.stock = stock
+    }
+}
 
-        this.nombre = nombre,
-        this.precio = precio,
-        this.stock = stock,
-        this.cantidadComprada = cantidadComprada
+const producto1 = new Producto ("remera", 150, 100);
+const producto2 = new Producto ("pantalon", 200, 15);
+
+let cantidadProductos = prompt("Cuantos productos desea comprar?");
+let precioFinal = 0;
+
+for(let i = 1; i <= cantidadProductos; i++){
+
+    let compra = prompt("Ingrese el nombre de su producto");
+    let cantidad = prompt("Cuantos quiere comprar?")
+
+    if(compra == producto1){
+        if(cantidad <=stock){
+            stock -= cantidad;
+            let precioTotal = precio*cantidad
+            if(precioTotal >200){
+            precioTotal = precioTotal *0.9
+            }
+
+        precioFinal += precioTotal
+
+    }else{
+
+        alert("No tenemos esa cantidad")
     }
 
-    controlStock(){
-        if(this.cantidadComprada > this.stock){
-            alert("No hay stock")
-        }else{
-            this.stock = this.stock - cantidadComprada;
-            alert('Se vendieron ' + this.cantidadCompra + 'unidades y quedaron ' + this.stock +  'disponibles')
-        }
+}else if(compra == producto2){
+
+    stock -= cantidad;
+    let precioTotal2 = precio*cantidad
+    if(precioTotal2 >1000){
+        precioTotal2 = precioTotal2 *0.9
+    }
+    else if(precioTotal2 > 2000){
+
+        precioTotal2 = precioTotal2 *0.8
+
     }
 
-    
+    precioFinal += precioTotal2
+
+  
+}else {
+
+    alert("No contamos con ese producto")
 }
 
 
-const producto1 = new Producto ("campera", 950, 30,15)
+}
 
+alert("El precio final es de: " + precioFinal)
 
-console.log(producto1);
-producto1.controlStock();
-console.log(producto1)
+let pago = prompt ("Ingrese con cuanto dinero va a pagar");
+let vuelto = pago - precioFinal;
+
+alert("Este es su vuelto " + vuelto);
